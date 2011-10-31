@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE katalog SYSTEM "UE_07_modekatalog.dtd">
+<katalog xsi:noNamespaceSchemaLocation="UE_07_modekatalog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<metadaten>
+		<katalogname>Mode-Katalog</katalogname>
+		<firmenname>Fashion Online</firmenname>
+	</metadaten>
+	<artikel>
+		<bezeichnung>Shirt</bezeichnung>
+		<beschreibung>Einfaches Shirt</beschreibung>
+		<artikel-nr>ab-0001</artikel-nr>
+		<hersteller>
+			<firma>Tom Taiylor</firma>
+			<land>Deutschland</land>
+		</hersteller>
+		<farbe>schwarz</farbe>
+		<farbe>rot</farbe>
+		<groesse>S</groesse>
+		<groesse>M</groesse>
+		<groesse>L</groesse>
+		<preis waehrung="EUR">19.90</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Shirt</bezeichnung>
+		<artikel-nr>ab-0002</artikel-nr>
+		<hersteller>
+			<firma>Hilfinger</firma>
+			<land>USA</land>
+		</hersteller>
+		<farbe>blau</farbe>
+		<farbe>grün</farbe>
+		<groesse>M</groesse>
+		<groesse>L</groesse>
+		<groesse>XL</groesse>
+		<preis waehrung="USD">54.80</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Hose</bezeichnung>
+		<artikel-nr>cd-0011</artikel-nr>
+		<hersteller>
+			<firma>Bos</firma>
+			<land>Deutschland</land>
+		</hersteller>
+		<groesse>44</groesse>
+		<groesse>46</groesse>
+		<groesse>48</groesse>
+		<preis waehrung="EUR">80.00</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Hose</bezeichnung>
+		<beschreibung>Schicke Hose von der Traditionsmarke Levit.</beschreibung>
+		<artikel-nr>fg-0020</artikel-nr>
+		<hersteller>
+			<firma>Levit</firma>
+			<land>USA</land>
+		</hersteller>
+		<farbe>schwarz</farbe>
+		<farbe>blau</farbe>
+		<groesse>31/34</groesse>
+		<groesse>32/32</groesse>
+		<groesse>32/34</groesse>
+		<groesse>34/32</groesse>
+		<groesse>34/34</groesse>
+		<groesse>34/36</groesse>
+		<preis waehrung="USD">49.95</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Pullover</bezeichnung>
+		<artikel-nr>de-0022</artikel-nr>
+		<hersteller>
+			<firma>Espri</firma>
+			<land>Deutschland</land>
+		</hersteller>
+		<farbe>rot</farbe>
+		<groesse>M</groesse>
+		<preis waehrung="EUR">34.90</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Pullover</bezeichnung>
+		<artikel-nr>xy-0017</artikel-nr>
+		<farbe>rot</farbe>
+		<groesse>M</groesse>
+		<groesse>L</groesse>
+		<preis waehrung="EUR">19.90</preis>
+	</artikel>
+	<artikel>
+		<bezeichnung>Socken</bezeichnung>
+		<artikel-nr>de-0015</artikel-nr>
+		<hersteller>
+			<firma>Airesis</firma>
+			<land>Schweiz</land>
+		</hersteller>
+		<farbe>weiß</farbe>
+		<farbe>schwarz</farbe>
+		<preis waehrung="CHF">3.90</preis>
+	</artikel>
+</katalog>

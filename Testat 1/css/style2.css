@@ -1,0 +1,79 @@
+/*
+
+	Alternatives Stylesheet
+
+	@author Valéry Becker / becker.valery@googlemail.com | Markus Tacker / m@tacker.org
+
+*/
+
+/*
+    -- ANFANG YUI RESET --
+
+	From: http://developer.yahoo.com/yui/3/cssreset/
+	The foundational CSS Reset removes the inconsistent styling of
+	HTML elements provided by browsers. This creates a dependably
+	flat foundation to built upon.
+	With CSS Reset loaded, write explicit CSS your project needs.
+
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.1.0
+build: 2026
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/*
+    -- ENDE YUI RESET --
+*/
+
+html { font-family: Georgia, Arial, Helvetica, sans-serif; background-color: #f0f0f0; }
+a { text-decoration: none; outline: none; color: #9E6D4E; }
+
+#main { width: 880px; margin: 100px auto; position: relative; }
+
+h1 { position: relative; font-size: 2em; font-weight: bold; background: transparent url(../img/style2/napoli.gif) repeat-x 0 0; padding: 0 0 0 100px; display: block; line-height: 44px; height: 48px; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; text-shadow: 1px 1px 1px #000; }
+#logoice { display: block; background: transparent url(../img/style2/logoice.png) no-repeat 50% 0; width: 84px; height: 186px; position: absolute; top: -75px; left: 16px; }
+h1 a { color: #CF194A; }
+h1 small { font-size: 0.5em; color: #FA8CB1; }
+h2, h3 { color: #CF194A; text-shadow: 1px 1px 1px #999; font-weight: bold; margin: 0 0 0.5em 0; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+
+#mainMenu { position: absolute; left: -200px; top: 150px; width: 150px; text-align: right; }
+#mainMenu li { padding: 0.25em; margin-bottom: 0.25em; -webkit-border-radius: 0.25em; -moz-border-radius: 0.25em; border-radius: 0.25em; }
+#mainMenu li:hover, #mainMenu li.active { background-color: #FFFEE1; }
+
+#content { margin-top: 100px; }
+
+#content div.left { background-color: #fffff1; float: left; width: 500px; margin-right: 50px; -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; padding: 25px; }
+#content div.right { float: left; width: 280px; }
+#content div.right p { margin: 0 0 25px 0; }
+#content div.right img { background-color: #FFFEE1; padding: 15px; -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; }
+p { margin: 0 0 0.5em 0; color: #222; line-height: 1.5em; font-size: 0.875em; }
+
+table { font-size: 0.875em; margin-left: -0.5em; width: 100%; }
+tr { margin: 0 0 0.25em 0; }
+th { font-weight: bold; }
+th, td { vertical-align: top; padding: 0.5em; }
+th, tr.even { background-color: #FFFEE1; border-bottom: 1px solid #ddd; }
+table.ice .col3, table.drinks .col2, table.drinks .col3, table.cake .col2 { white-space: nowrap; text-align: right; }
+table.ice td.col2 { color: #666; }
+
+blockquote p { color: #9E6D4E; font-size: 1.5em; font-style: italic; margin-left: 1em; }
+blockquote { position: relative; }
+blockquote:before { content: "„"; color: #d8b49d; font-size: 3em; position: absolute; top: -35px; left: 0; }
+
+form { margin-top: 25px; }
+fieldset { margin: 0 0 25px 0; padding: 1em; background-color: #e7dac8; -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; }
+legend { background-color: #9e6d4e; color: #fffee1; padding: 0.5em; -webkit-border-radius: 0.5em; -moz-border-radius: 0.5em; border-radius: 0.5em; text-shadow: 1px 1px 1px #000;  }
+label { margin-right: 1em; }
+input[type=checkbox] { margin-right: 0.5em; }
+textarea, input[type=text], input[type=password] { width: 450px; padding: 10px; font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif; }
+#zip { width: 100px; margin-right: 25px; }
+label.zip { display: inline-block; width: 135px; }
+#location { width: 301px; }
+p.button { text-align: center; }
+button { color: #CF194A; font-size: 2em; font-weight: bold; text-shadow: 1px 1px 1px #000; }
+
+#footer { color: #999; text-align: center; font-size: 0.75em; float: left; clear: both; width: 550px; margin: 2em 0; }

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="katalog">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="metadaten" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="katalogname" type="titel"/>
+							<xsd:element name="firmenname" type="xsd:string"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="artikel" minOccurs="5" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Der Katalog muss mindestes fünf (5) Artikel enthalten.</xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="bezeichnung" type="titel"/>
+							<xsd:element name="beschreibung" type="xsd:string" minOccurs="0"/>
+							<xsd:element name="artikel-nr">
+								<xsd:annotation>
+									<xsd:documentation>Die Artikelnummern müssen dem Schema xx-yyyy entsprechen, wobei x ein
+beliebiger Kleinbuchstabe und y eine beliebige Ziffer sein darf.</xsd:documentation>
+								</xsd:annotation>
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:pattern value="[a-z]{2}-[0-9]{4}"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="hersteller" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="firma" type="xsd:string"/>
+										<xsd:element name="land" type="xsd:string"/>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="farbe" type="merkmale" minOccurs="0" maxOccurs="unbounded"/>
+							<xsd:element name="groesse" type="merkmale" minOccurs="0" maxOccurs="unbounded"/>
+							<xsd:element name="preis">
+								<xsd:complexType>
+									<xsd:simpleContent>
+										<xsd:extension base="preis">
+											<xsd:attribute name="waehrung" use="required">
+												<xsd:simpleType>
+													<xsd:restriction base="xsd:string">
+														<xsd:enumeration value="EUR"/>
+														<xsd:enumeration value="USD"/>
+														<xsd:enumeration value="CHF"/>
+													</xsd:restriction>
+												</xsd:simpleType>
+											</xsd:attribute>
+										</xsd:extension>
+									</xsd:simpleContent>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="merkmale">
+		<xsd:annotation>
+			<xsd:documentation>Größe und Farbangaben dürfen höchstens 10 Zeichen lang sein, müssen mindestens
+aber ein (1) Zeichen enthalten.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="titel">
+		<xsd:annotation>
+			<xsd:documentation>Der Katalogtitel und die Artikelbezeichnungen dürfen höchstens 30 Zeichen
+enthalten</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="0"/>
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="preis">
+		<xsd:annotation>
+			<xsd:documentation>Nur positive Preisangaben
+erlaubt, die höchstens zwei Nachkommastellen haben dürfen.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minExclusive value="0"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

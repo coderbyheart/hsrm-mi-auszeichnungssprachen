@@ -1,0 +1,41 @@
+<?php
+
+	$menu = array(
+		'eiscafe.html' => 'Unser Eiscafé',
+		'spezialitaeten.html' => 'Unsere Spezialitäten',
+		'eiskonfigurator.html' => 'Eis-Konfigurator',
+		'neapel.html' => 'Neapel',
+		'familie.html' => 'Familie',
+	);
+
+	$title = isset($menu[substr($_SERVER['REQUEST_URI'], 1)]) ? ': ' . $menu[substr($_SERVER['REQUEST_URI'], 1)] : '';
+
+?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+	<title>Eiscafé Napoli<?php echo $title; ?></title>
+	<link rel="stylesheet" title="Alternatives Stylesheet (CSS3)" href="css/style2.css" />
+	<!--
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="alternate stylesheet" title="Alternatives Stylesheet (CSS3)" href="css/style2.css" />
+	-->
+	<meta name="author" content="Valéry Becker / becker.valery@googlemail.com | Markus Tacker / m@tacker.org" />
+</head>
+<body>
+	<div id="main">
+		<h1>
+			<a href="index.html">
+				<span id="logoice"></span>
+				Eiscafé Napoli
+				<small>seit 1982</small>
+			</a>
+		</h1>
+		<ul id="mainMenu">
+			<?php foreach($menu as $datei => $bezeichnung): ?>
+			<li class="<?php echo strstr($_SERVER['REQUEST_URI'], $datei) ? 'active' : ''; ?>"><a href="<?php echo $datei; ?>"><?php echo $bezeichnung; ?></a></li>
+			<?php endforeach; ?>
+		</ul>
+		<div id="content">

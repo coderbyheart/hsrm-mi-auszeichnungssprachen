@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT katalog (metadaten, artikel*)>
+<!ELEMENT metadaten (katalogname, firmenname)>
+<!ELEMENT katalogname (#PCDATA)>
+<!ELEMENT firmenname (#PCDATA)>
+<!ELEMENT artikel (bezeichnung, beschreibung?, artikel-nr, hersteller?, farbe*, groesse*, preis)>
+<!ELEMENT bezeichnung (#PCDATA)>
+<!ELEMENT beschreibung (#PCDATA)>
+<!ELEMENT artikel-nr (#PCDATA)>
+<!ELEMENT hersteller (firma, land)>
+<!ELEMENT firma (#PCDATA)>
+<!ELEMENT land (#PCDATA)>
+<!ELEMENT farbe (#PCDATA)>
+<!ELEMENT groesse (#PCDATA)>
+<!ELEMENT preis (#PCDATA)>
+<!ATTLIST preis
+ waehrung (EUR | CHF | USD) #REQUIRED>
